@@ -13,3 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require skrollr
+//= require_skrollr.stylesheets.min
