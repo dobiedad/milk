@@ -56,6 +56,15 @@ body {
   -skrollr-animation-name:logo;
 
 }
+
+.chart {
+  background-image: image-url("chart.png");
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index:1;
+
+}
 .tee {
   background-image: image-url("tee.png");
   position:absolute;
@@ -215,7 +224,7 @@ body {
   }
 
   500 {
-    opacity:.9;
+    opacity:.98;
     top:-10%;
     transform:rotate(90deg);
   }
