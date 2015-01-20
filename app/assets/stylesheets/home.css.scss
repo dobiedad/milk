@@ -4,6 +4,7 @@
 body {
   margin:0;
   -skrollr-animation-name:body;
+  max-height:2200px;
 
 }
 #navbar {
@@ -118,6 +119,14 @@ body {
     background-position:1500px 9000px;
 
   }
+  3000 {
+    background-position:11500px 6000px;
+
+  }
+  5000 {
+    background-position:1500px -9000px;
+
+  }
 }
 @-skrollr-keyframes pg2 {
   0 {
@@ -127,6 +136,14 @@ body {
   2000 {
     background-position:900px 6000px;
   }
+  3000 {
+    background-position:11500px 6000px;
+
+  }
+  5000 {
+    background-position:-1500px 9000px;
+
+  }
 }
 @-skrollr-keyframes pg3 {
   0 {
@@ -135,6 +152,14 @@ body {
 
   2000 {
     background-position:-500px 1100px;
+  }
+  3000 {
+    background-position: 500px -6000px;
+
+  }
+  5000 {
+    background-position: -500px 54000px;
+
   }
 }
 @-skrollr-keyframes video-div {
@@ -183,13 +208,11 @@ body {
 
   }
 
-  500 {
+  2000 {
     background-color:rgb(0,0,0);
 
   }
-  1000 {
-    background-color:rgb(255,0,0);
-  }
+
 
 
 }
