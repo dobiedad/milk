@@ -27,7 +27,7 @@ body {
 #pg3 {
   -skrollr-animation-name:pg3;
   background-image: image-url("pg3.png");
-  z-index:49;
+  z-index:48;
 }
 #pg1, #pg2, #pg3 {
   z-index: 50;
@@ -39,9 +39,10 @@ body {
 }
 #video-div {
   width:100%;
-  position:relative;
+  position:fixed;
   -skrollr-animation-name:video-div;
-
+  height:100vh;
+  max-width:100%
 }
 
 #main-video{
@@ -49,6 +50,42 @@ body {
   display: block;
   height:100vh;
   max-width:100%
+}
+.tee {
+  background-image: image-url("tee.png");
+  position:absolute;
+  bottom:15%;
+  left:30%;
+  width: 200px;
+  height: 200px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  -skrollr-animation-name:tee;
+
+}
+.hex {
+  background-image: image-url("hex.png");
+  top:5%;
+  left:15%;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  -skrollr-animation-name:hex;
+
+}
+.dots {
+  background-image: image-url("dots.png");
+  top:20%;
+  right:10%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  -skrollr-animation-name:dots;
+
 }
 @-skrollr-keyframes navbarAnimation {
   0 {
@@ -63,21 +100,23 @@ body {
     left:0%;
   }
 
-  top {
+  0 {
     background-color:rgb(0,0,0);
   }
 
-  bottom {
-    background-color:rgb(255,0,0);
+  1000 {
+    background-color:rgb(255,255,255);
   }
 }
 @-skrollr-keyframes pg1 {
   0 {
     background-position:0px 0px;
+
   }
 
-  end {
-    background-position:500px 1000px;
+  2000 {
+    background-position:1500px 9000px;
+
   }
 }
 @-skrollr-keyframes pg2 {
@@ -85,8 +124,8 @@ body {
     background-position:0px 0px;
   }
 
-  end {
-    background-position:500px 600px;
+  2000 {
+    background-position:900px 6000px;
   }
 }
 @-skrollr-keyframes pg3 {
@@ -94,8 +133,8 @@ body {
     background-position:0px 0px;
   }
 
-  end {
-    background-position:500px 100px;
+  2000 {
+    background-position:-500px 1100px;
   }
 }
 @-skrollr-keyframes video-div {
@@ -107,9 +146,35 @@ body {
   }
 
   500 {
-    opacity:0;
+    opacity:.8;
     top:-10%;
-    transform:rotate(180deg);
+    transform:rotate(90deg);
+  }
+  1000 {
+    opacity:.6;
+    top:50%;
+    transform:rotate(-90deg);
+  }
+  2500 {
+    opacity:1;
+    background:rgba(255, 255, 255, 0.85);
+    top:80%;
+    transform:rotate(360deg);
+  }
+  3500 {
+    display:block;
+    top:-100%;
+    position:fixed;
+  }
+  4500 {
+    display:block;
+    top:100%;
+    position:fixed;
+  }
+  5500 {
+    display:block;
+    top:0%;
+    position:fixed;
   }
 }
 @-skrollr-keyframes body {
@@ -127,4 +192,63 @@ body {
   }
 
 
+}
+@-skrollr-keyframes tee {
+  0 {
+    transform:scale(0) rotate(0deg);
+    }
+  1000 {
+    transform:scale(1) rotate(1440deg);opacity:1;
+    }
+
+  2000 {
+    transform:scale(5) rotate(3240deg);opacity:.2;
+  }
+  3000 {
+    transform:scale(3) rotate(440deg);opacity:.6;
+  }
+
+  5000 {
+    transform:scale(2) rotate(240deg);opacity:.4;
+  }
+}
+@-skrollr-keyframes dots {
+  0 {
+    transform:scale(0) rotate(0deg);
+  }
+  1000 {
+    transform:scale(1) rotate(1440deg);opacity:.4;
+  }
+
+  2000 {
+    transform:scale(5) rotate(3240deg);opacity:.3;
+  }
+  3000 {
+    transform:scale(3) rotate(140deg);opacity:.9;
+  }
+
+  5000 {
+    transform:scale(2) rotate(340deg);opacity:.4;
+    top:5%;
+  }
+}
+@-skrollr-keyframes hex {
+  0 {
+    transform:scale(0) rotate(0deg);
+  }
+  1000 {
+    transform:scale(3) rotate(1440deg);opacity:.7;
+  }
+
+  2000 {
+    transform:scale(1) rotate(3240deg);opacity:1;
+  }
+  3000 {
+    transform:scale(3) rotate(140deg);opacity:.9;
+  }
+
+  5000 {
+    transform:scale(.3) rotate(340deg);opacity:.3;
+    left:3%;
+  }
 }
