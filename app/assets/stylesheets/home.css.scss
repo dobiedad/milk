@@ -35,7 +35,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 1000px;
+  min-height: 2200px;
   background: image-url("pg1.png") repeat 0 0;
 }
 #video-div {
@@ -59,8 +59,10 @@ body {
 
 .chart {
   background-image: image-url("chart.png");
-
-  -skrollr-animation-name:chart;
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index:1;
 
 }
 .tee {
@@ -268,7 +270,7 @@ body {
   }
 
   3000 {
-    background-position: -5000px 54000px;
+    background-position: -5000px 5000px;
   }
 
 }
@@ -360,12 +362,9 @@ body {
     left:3%;
   }
 }
-@media screen and (min-width : 768){
+@media screen and (max-width : 768){
   .chart{
-    height: 100vh;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    z-index:1;
+    display:none;
   }
 
 }
