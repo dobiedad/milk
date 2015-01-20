@@ -118,7 +118,7 @@ body {
     transition: opacity .75s ease-in-out;
     -moz-transition: opacity .75s ease-in-out;
     -webkit-transition: opacity .75s ease-in-out;
-    opacity: 0.8;
+    opacity: 0.8 !important;
     cursor:pointer;
     font-size:8em;
     border-radius: 50%;
@@ -288,9 +288,11 @@ body {
   }
 
   2000 {
-    transform:scale(5) rotate(3240deg);opacity:.2;
+    transform:scale(4) rotate(3240deg);opacity:.2;
   }
-
+  2500 {
+    transform:scale(1) rotate(3240deg);opacity:0;
+  }
 }
 @-skrollr-keyframes dots {
   0 {
