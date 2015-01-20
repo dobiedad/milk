@@ -63,6 +63,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   z-index:1;
+  -skrollr-animation-name:chart;
 
 }
 .tee {
@@ -105,7 +106,6 @@ body {
   font-family: fantasy;
   font-size: 2em;
   top: 3%;
-  position: absolute;
   left: 2%;
   color: rgb(31, 202, 232);
   font-weight: 900;
@@ -129,7 +129,7 @@ body {
     -webkit-transition: opacity .75s ease-in-out;
     opacity: 0.8 !important;
     cursor:pointer;
-    font-size:8em;
+    font-size:4em;
     border-radius: 50%;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -255,6 +255,23 @@ body {
     position:fixed;
   }
 }
+@-skrollr-keyframes chart {
+
+  500 {
+    opacity:1;
+    top:80%;
+    transform:rotate(360deg);
+  }
+  1000 {
+    opacity:.5;
+    transform:rotate(-360deg);
+  }
+  2000 {
+    transform: rotate(440deg);opacity:.6;
+  }
+
+
+}
 @-skrollr-keyframes body {
   0 {
     background-color:rgb(255,255,255);
@@ -293,7 +310,7 @@ body {
     transform:scale(0) rotate(0deg);
   }
   1000 {
-    transform:scale(1) rotate(1440deg);opacity:1;
+    transform:scale(1) rotate(1440deg);opacity:0;
   }
 
   2000 {
