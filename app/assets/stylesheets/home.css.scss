@@ -52,6 +52,10 @@ body {
   height:100vh;
   max-width:100%
 }
+#logo {
+  -skrollr-animation-name:logo;
+
+}
 .tee {
   background-image: image-url("tee.png");
   position:absolute;
@@ -86,6 +90,46 @@ body {
   background-size: 100px;
   background-repeat: no-repeat;
   -skrollr-animation-name:dots;
+
+}
+.company {
+  font-family: fantasy;
+  font-size: 2em;
+  top: 3%;
+  position: absolute;
+  left: 2%;
+  color: rgb(31, 202, 232);
+  font-weight: 900;
+  opacity: 0.1;
+  z-index:999;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  -skrollr-animation-name:logo;
+
+  &:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: opacity .75s ease-in-out;
+    -moz-transition: opacity .75s ease-in-out;
+    -webkit-transition: opacity .75s ease-in-out;
+    opacity: 0.8;
+    cursor:pointer;
+    font-size:8em;
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+
+
+  }
 
 }
 @-skrollr-keyframes navbarAnimation {
@@ -235,16 +279,29 @@ body {
     transform:scale(2) rotate(240deg);opacity:.4;
   }
 }
+@-skrollr-keyframes logo {
+  0 {
+    transform:scale(0) rotate(0deg);
+  }
+  1000 {
+    transform:scale(1) rotate(1440deg);opacity:1;
+  }
+
+  2000 {
+    transform:scale(5) rotate(3240deg);opacity:.2;
+  }
+
+}
 @-skrollr-keyframes dots {
   0 {
     transform:scale(0) rotate(0deg);
   }
   1000 {
-    transform:scale(1) rotate(1440deg);opacity:.4;
+    transform:scale(6) rotate(1440deg);opacity:.4;
   }
 
   2000 {
-    transform:scale(5) rotate(3240deg);opacity:.3;
+    transform:scale(8) rotate(3240deg);opacity:.3;
   }
   3000 {
     transform:scale(3) rotate(140deg);opacity:.9;
