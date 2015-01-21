@@ -8,8 +8,10 @@
       <span class="company">STEELE & BROWN</span>
     </div>
     <div id="client_portal">
-      <a id="portal_form_button">bla</a>
+      <a id="portal_form_button">Client Portal</a>
     </div>
+    
+
     <div class="hex">
     </div>
     <div class="dots">
@@ -22,6 +24,22 @@
   <div id="pg1"></div>
   <div id="pg2"></div>
   <div id="pg3"></div>
+
+  <div id="modal">
+    <%= form_for(User.new, as: :user, url: session_path(:user)) do |f| %>
+
+    <div><%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %></div>
+
+      <div><%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %></div>
+
+        <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+
+        <div><%= f.submit "Sign in" %></div>
+        <% end %>
+      </div>
+
 <script charset="utf-8">
 $('#portal_form_button').click(function(){
   $('#modal').fadeIn();

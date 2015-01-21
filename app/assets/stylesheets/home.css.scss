@@ -149,6 +149,14 @@ body {
   background: rgba(47, 6, 6, 0.81);
   display:none;
 }
+#client_portal {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  color: rgb(240, 174, 186);
+  font-size: 3em;
+  z-index:999
+}
 
 @-skrollr-keyframes navbarAnimation {
   0 {
