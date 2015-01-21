@@ -8,7 +8,7 @@
       <span class="company">STEELE & BROWN</span>
     </div>
     <div id="client_portal">
-      <%= link_to "Client Portal",client_portal_path %>
+      <a id="portal_form_button">bla</a>
     </div>
     <div class="hex">
     </div>
@@ -22,3 +22,8 @@
   <div id="pg1"></div>
   <div id="pg2"></div>
   <div id="pg3"></div>
+<script charset="utf-8">
+$('#portal_form_button').click(function(){
+  $('#modal').fadeIn();
+});
+</script>

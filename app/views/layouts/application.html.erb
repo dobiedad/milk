@@ -14,6 +14,23 @@
 <%= javascript_include_tag "skrollr" %>
 
 <%= javascript_include_tag "skrollr.stylesheets.min" %>
+
+<div id="modal">
+  <%= form_tag "/users/sign_in", :class => "new_user", :id => "new_user" do %>
+
+    <div><label for="user_email">Email</label><br />
+    <input autofocus="autofocus" id="user_email" name="user[email]" type="email" value="" /></div>
+
+    <div><label for="user_password">Password</label><br />
+    <input autocomplete="off" id="user_password" name="user[password]" type="password" /></div>
+
+    <div><input name="user[remember_me]" type="hidden" value="0" /><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" /> <label for="user_remember_me">Remember me</label></div>
+
+    <div><input name="commit" type="submit" value="Sign in" /></div>
+
+  <% end %>
+
+</div>
 <script type="text/javascript">
 var s = skrollr.init();
 </script>
