@@ -239,12 +239,21 @@ h1 {
   background:transparent;
   border-radius:0px;
   padding:0;
-  width: 72%;
   border:none;
-  border-bottom:1px solid #e7e7e7;
 }
-
-
+#primary_object {
+  width:70%;
+  max-width:700px;
+  margin:auto;
+}
+.primary_object_h {
+  text-align: center;
+  border-bottom: 2px solid #e7e7e7;
+  width: 220px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding-bottom: 11px;
+}
 @-skrollr-keyframes navbarAnimation {
   0 {
     left:100%;
