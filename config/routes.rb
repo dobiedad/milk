@@ -7,7 +7,7 @@ Milk::Application.routes.draw do
 
   get 'client_portal' => 'client_portal#index'
   get "client_portal/company_description" => "client_portal#company_description", as: :company_description
-  get "client_portal/futures" => "client_portal#futures", as: :futures
+  get "client_portal/about" => "client_portal#about", as: :about
   get "client_portal/primary_object" => "client_portal#primary_object", as: :primary_object
   get "client_portal/investment" => "client_portal#investment", as: :investment
   get "client_portal/riot_ritual" => "client_portal#riot_ritual", as: :riot_ritual
