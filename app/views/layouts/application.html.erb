@@ -14,9 +14,11 @@
 <%= javascript_include_tag "skrollr" %>
 
 <%= javascript_include_tag "skrollr.stylesheets.min" %>
+<%= javascript_include_tag "placeholder.min" %>
 
 <script type="text/javascript">
 var s = skrollr.init();
+Placeholdem( document.querySelectorAll( '[placeholder]' ) );
 </script>
 
 </body>

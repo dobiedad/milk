@@ -105,12 +105,12 @@ body {
   position:absolute;
   font-family: fantasy;
   font-size: 4em;
-  top: 3%;
+  top: 3.5%;
   left: 2%;
   color: rgb(31, 202, 232);
-  font-weight: 900;
+  font-weight: 100;
   opacity: 0.1;
-  z-index:999999;
+  z-index:99;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -178,6 +178,7 @@ input {
   padding:10px;
   display: block;
   margin: auto;
+  color:white
 }
 .sessions_button {
   color: white;
@@ -186,7 +187,7 @@ input {
   display: block;
   margin-top: 15px;
   border-radius: 1px;
-  border: 1px solid #F0AEBA;
+  border: 1px solid #AEC8F0;
   background: rgba(24, 14, 13, 0.53);
   width: 200px;
   padding-top:10px;
@@ -195,7 +196,7 @@ input {
   font-size:11px;
   cursor:pointer;
   &:hover {
-    background:#F0AEBA;
+    background:#AEC8F0;
   }
 }
 
@@ -216,9 +217,15 @@ input {
 }
 h1 {
   color:white;
+  font-weight:100;
 }
 
-
+.other_session_button {
+  border: 1px solid #DFAEF0;
+  &:hover {
+    background:#DFAEF0;
+  }
+}
 
 
 

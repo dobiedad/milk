@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require skrollr
-//= require_skrollr.stylesheets.min
+//= require skrollr.stylesheets.min
+//= require placeholder.min
