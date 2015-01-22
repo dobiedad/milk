@@ -21,6 +21,9 @@
     <div class=""><%= image_tag ('close.png'),id:"close"%></div>
     <div id="sign_in_form" class="form">
       <h1>Sign In</h1>
+      <% @user.errors.full_messages.each do |error| %> <%= sentence = I18n.t("errors.messages.not_saved",
+        count: @user.errors.count,
+        resource: 'user') %>  <% end %>
       <%= form_for(User.new, as: :user, url: session_path(:user)) do |f| %>
       <%= f.email_field :email,  :placeholder => "Email" %><br>
       <%= f.password_field :password, autocomplete: "off", :placeholder => "Password" %><br>
@@ -55,6 +58,7 @@
 $('#portal_form_button').click(function(){
   $('#modal').fadeToggle();
 });
+
 $('#close').click(function(){
   $('#modal').fadeOut();
 });

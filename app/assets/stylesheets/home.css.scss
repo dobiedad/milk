@@ -67,8 +67,8 @@ body {
 .tee {
   background-image: image-url("tee.png");
   position:absolute;
-  bottom:15%;
-  left:30%;
+  bottom:45%;
+  right:10%;
   width: 200px;
   height: 200px;
   background-size: 100px;
@@ -78,7 +78,7 @@ body {
 }
 .hex {
   background-image: image-url("hex.png");
-  top:5%;
+  top:20%;
   left:15%;
   position: absolute;
   width: 300px;
@@ -194,6 +194,7 @@ input {
   margin-top: 10px;
   font-size:11px;
   cursor:pointer;
+  font-family: inherit;
   &:hover {
     background:#AEC8F0;
   }
@@ -379,7 +380,10 @@ h1 {
 }
 @-skrollr-keyframes tee {
   0 {
-    transform:scale(0) rotate(0deg);
+    transform:scale(3) rotate(0deg);
+    }
+    1 {
+      transform:scale(3) rotate(6000deg);
     }
   1000 {
     transform:scale(1) rotate(1440deg);opacity:1;
@@ -413,10 +417,12 @@ h1 {
 }
 @-skrollr-keyframes dots {
   0 {
-    transform:scale(0) rotate(0deg);
+    transform:scale(1.5) rotate(0deg);
+    top:15%;
   }
   1000 {
     transform:scale(6) rotate(1440deg);opacity:.4;
+
   }
 
   2000 {
@@ -433,7 +439,7 @@ h1 {
 }
 @-skrollr-keyframes hex {
   0 {
-    transform:scale(0) rotate(0deg);
+    transform:scale(.5) rotate(0deg);
   }
   1000 {
     transform:scale(3) rotate(1440deg);opacity:.7;
