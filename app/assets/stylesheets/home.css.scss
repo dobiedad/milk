@@ -151,7 +151,7 @@ body {
   width: 100%;
   height: 100vh;
   top: 0;
-  background: rgba(47, 6, 6, 0.81);
+  background: rgba(0, 0, 0, 0.94);
   display:none;
 }
 #client_portal {
@@ -163,7 +163,26 @@ body {
   z-index:999;
   cursor:pointer;
 }
+.form {
+  padding: 20px;
+  padding-bottom: 0px;
+  margin:auto;
+  width:250px;
+  margin-top: 50px;
 
+}
+input {
+  border-radius: 0px;
+  border: 1px solid #EC5252;
+  background: rgba(24, 14, 13, 0.53);
+  width: 200px;
+  padding:10px;
+  display: block;
+  margin: auto;
+}
+.sessions_button {
+  color:white;
+}
 @-skrollr-keyframes navbarAnimation {
   0 {
     left:100%;
