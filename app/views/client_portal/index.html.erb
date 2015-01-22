@@ -1,2 +1,26 @@
-hi
-<%= link_to "Sign Out".html_safe, destroy_user_session_path, method: "delete" %>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+      data-target="#navbarLinks">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarLinks">
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Company Description", client_portal_path %></li>
+      <li><%= link_to "Futures", client_portal_path %></li>
+      <li><%= link_to "Primary Object", client_portal_path %></li>
+      <li><%= link_to "Investment Opportunity",root_path %></li>
+      <li><%= link_to "Riot & Ritual", client_portal_path %></li>
+      <li><%= link_to "Sign Out".html_safe, destroy_user_session_path, method: "delete" %></li>
+      <!-- <li><a href="#">Menu</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li> -->
+
+    </ul>
+  </div>
+</nav>

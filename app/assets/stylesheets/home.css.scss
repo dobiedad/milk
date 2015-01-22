@@ -153,14 +153,22 @@ body {
   background: rgba(0, 0, 0, 0.94);
   display:none;
 }
+#portal_form_button {
+  color: rgb(240, 174, 186) !important ;
+  font-weight: 300;
+  &:hover {
+    opacity:.7;
+  }
+}
 .client_portal {
   position: absolute;
   bottom: 7%;
   right: 2%;
-  color: rgb(240, 174, 186);
+  color: rgb(240, 174, 186) ;
   font-size: 3em;
   z-index:999;
   cursor:pointer;
+
 }
 .form {
   padding: 20px;
@@ -227,7 +235,14 @@ h1 {
   }
 }
 
-
+.navbar-default {
+  background:transparent;
+  border-radius:0px;
+  padding:0;
+  width: 72%;
+  border:none;
+  border-bottom:1px solid #e7e7e7;
+}
 
 
 @-skrollr-keyframes navbarAnimation {
@@ -282,7 +297,7 @@ h1 {
     background-position:11500px 6000px;
 
   }
-  5000 {
+  6000 {
     background-position:-1500px 9000px;
 
   }
@@ -299,7 +314,7 @@ h1 {
     background-position: 500px -6000px;
 
   }
-  5000 {
+  6000 {
     background-position: -500px 54000px;
 
   }
@@ -338,7 +353,7 @@ h1 {
     top:100%;
     position:fixed;
   }
-  5500 {
+  6500 {
     display:block;
     top:0%;
     position:fixed;
