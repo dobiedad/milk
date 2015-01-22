@@ -51,12 +51,22 @@
 </div>
 
 
-
+<% if user_signed_in? %>
+  <script charset="utf-8">
+    $('#portal_form_button').click(function(){
+      window.location = "<%= client_portal_path %>"
+    });
+  </script>
+  <% else %>
+  <script charset="utf-8">
+    $('#portal_form_button').click(function(){
+      $('#modal').fadeToggle();
+    });
+  </script>
+<% end %>
 
 <script charset="utf-8">
-$('#portal_form_button').click(function(){
-  $('#modal').fadeToggle();
-});
+
 
 $('#close').click(function(){
   $('#modal').fadeOut();
