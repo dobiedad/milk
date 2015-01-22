@@ -13,11 +13,10 @@
 </div>
 <div class="collapse navbar-collapse" id="navbarLinks">
   <ul class="nav navbar-nav">
-    <li><%= link_to "Company Description", client_portal_path %></li>
-    <li><%= link_to "About", about_path %></li>
-    <li><%= link_to "Primary Object", primary_object_path %></li>
-    <li><%= link_to "Investment Opportunity",investment_path %></li>
-    <li><%= link_to "Riot & Ritual", riot_ritual_path  %></li>
+    <li class="<%= 'active' if current_page?(client_portal_path) %>"><%= link_to "Bio", client_portal_path %></li>
+    <li class="<%= 'active' if current_page?(primary_object_path) %>"><%= link_to "Primary Object", primary_object_path %></li>
+    <li class="<%= 'active' if current_page?(investment_path) %>"><%= link_to "Investment Opportunity",investment_path %></li>
+    <li class="<%= 'active' if current_page?(riot_ritual_path) %>"><%= link_to "Riot & Ritual", riot_ritual_path  %></li>
     <li><%= link_to "Sign Out".html_safe, destroy_user_session_path, method: "delete" %></li>
     <!-- <li><a href="#">Menu</a></li>
     <li><a href="#">Gallery</a></li>
@@ -26,3 +25,17 @@
   </ul>
 </div>
 </nav>
+<script charset="utf-8">
+
+
+$('#portal-logo').click(function(){
+  window.location = "<%= root_path %>"
+});
+$("nav li").click(function () {
+  $("nav li.active").removeClass("active"); //Remove any "active" class
+  $("nav li", this).addClass("active"); //Add "active" class to selected tab
+
+  // $(activeTab).show(); //Fade in the active content
+});
+
+</script>

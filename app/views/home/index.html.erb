@@ -1,55 +1,56 @@
-
-<div id="chart">
-  <div class="chart"></div>
-</div>
-<div id="pg1"></div>
-<div id="pg2"></div>
-<div id="pg3"></div>
-
-<div id="video-div">
-  <div class="logo">
-    STEELE & BROWN
+<div id="bg_layer">
+  <div id="chart">
+    <div class="chart"></div>
   </div>
-  <div id="client_portal" class="client_portal">
-    <a id="portal_form_button">Client Portal</a>
-  </div>
-  <div class="hex"></div>
-  <div class="dots"></div>
-  <div class="tee"></div>
-  <%= video_tag "milk.mp4",id:"main-video", autoplay: true, :controls => false %>
-  <div id="modal">
-    <div class=""><%= image_tag ('close.png'),id:"close"%></div>
-    <div id="sign_in_form" class="form">
-      <h1>Sign In</h1>
-      <%= form_for(User.new, as: :user, url: session_path(:user), remote: true,
-      :authenticity_token => true) do |f| %>
-      <%= f.email_field :email,  :placeholder => "Email" %><br>
-      <%= f.password_field :password, autocomplete: "off", :placeholder => "Password" %><br>
-      <!-- <%= f.check_box :remember_me %> <%= f.label :remember_me %><br> -->
-      <%= f.submit "Sign in", :class => 'sessions_button'  %>
-      <% end %>
-      <!-- <%= link_to "Sign up", new_registration_path(User), :class => 'sessions_button'%> -->
-      <a id="sign_up" class="sessions_button other_session_button"> Sign Up</a>
+  <div id="pg1"></div>
+  <div id="pg2"></div>
+  <div id="pg3"></div>
+
+  <div id="video-div">
+    <div class="logo">
+      STEELE & BROWN
+    </div>
+    <div id="client_portal" class="client_portal">
+      <a id="portal_form_button">Client Portal</a>
+    </div>
+    <div class="hex"></div>
+    <div class="dots"></div>
+    <div class="tee"></div>
+    <%= video_tag "milk.mp4",id:"main-video", autoplay: true, :controls => false %>
+    <div id="modal">
+      <div class=""><%= image_tag ('close.png'),id:"close"%></div>
+      <div id="sign_in_form" class="form">
+        <h1>Sign In</h1>
+        <%= form_for(User.new, as: :user, url: session_path(:user), remote: true,
+        :authenticity_token => true) do |f| %>
+        <%= f.email_field :email,  :placeholder => "Email" %><br>
+        <%= f.password_field :password, autocomplete: "off", :placeholder => "Password" %><br>
+        <!-- <%= f.check_box :remember_me %> <%= f.label :remember_me %><br> -->
+        <%= f.submit "Sign in", :class => 'sessions_button'  %>
+        <% end %>
+        <!-- <%= link_to "Sign up", new_registration_path(User), :class => 'sessions_button'%> -->
+        <a id="sign_up" class="sessions_button other_session_button"> Sign Up</a>
+      </div>
+
+      <div id="sign_up_form" class="form">
+        <h1>Sign Up</h1>
+        <%= form_for(User.new, as: :user, url: registration_path(:user), remote: true,
+        :authenticity_token => true) do |f| %>
+
+        <%= f.email_field :email,  :placeholder => "Email" %><br>
+        <%= f.password_field :password, autocomplete: "off", :placeholder => "Password" %><br>
+        <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Password" %><br>
+        <div><%= f.submit "Sign up", :class => 'sessions_button'  %></div>
+        <% end %>
+        <a id="sign_in" class="sessions_button other_session_button"> Sign In</a>
+      </div>
+
+
+
+
     </div>
 
-    <div id="sign_up_form" class="form">
-      <h1>Sign Up</h1>
-      <%= form_for(User.new, as: :user, url: registration_path(:user), remote: true,
-      :authenticity_token => true) do |f| %>
-
-      <%= f.email_field :email,  :placeholder => "Email" %><br>
-      <%= f.password_field :password, autocomplete: "off", :placeholder => "Password" %><br>
-      <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Password" %><br>
-            <div><%= f.submit "Sign up", :class => 'sessions_button'  %></div>
-            <% end %>
-      <a id="sign_in" class="sessions_button other_session_button"> Sign In</a>
-    </div>
-
-
-
-
 </div>
-
 
 <% if user_signed_in? %>
   <script charset="utf-8">
