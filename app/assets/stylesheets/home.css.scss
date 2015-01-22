@@ -154,7 +154,7 @@ body {
   background: rgba(0, 0, 0, 0.94);
   display:none;
 }
-#client_portal {
+.client_portal {
   position: absolute;
   bottom: 7%;
   right: 2%;
@@ -168,12 +168,11 @@ body {
   padding-bottom: 0px;
   margin:auto;
   width:250px;
-  margin-top: 50px;
-
+  margin-top: 30%;
 }
 input {
-  border-radius: 0px;
-  border: 1px solid #EC5252;
+  border-radius: 1px;
+  border: 1px solid #F0AEBA;
   background: rgba(24, 14, 13, 0.53);
   width: 200px;
   padding:10px;
@@ -181,8 +180,31 @@ input {
   margin: auto;
 }
 .sessions_button {
-  color:white;
+  color: white;
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin-top: 15px;
 }
+
+#close {
+  width: 20px;
+  margin:10px;
+  cursor:pointer;
+  &:hover {
+    opacity:.8;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 @-skrollr-keyframes navbarAnimation {
   0 {
     left:100%;

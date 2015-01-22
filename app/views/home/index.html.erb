@@ -1,5 +1,4 @@
 
-<div id="navbar"></div>
 <div id="chart">
   <div class="chart"></div>
 </div>
@@ -7,7 +6,7 @@
   <div class="logo">
     STEELE & BROWN
   </div>
-  <div id="client_portal">
+  <div id="client_portal" class="client_portal">
     <a id="portal_form_button">Client Portal</a>
   </div>
   <div class="hex"></div>
@@ -21,6 +20,7 @@
 <div id="pg3"></div>
 
 <div id="modal">
+  <div class=""><%= image_tag ('close.png'),id:"close"%></div>
   <div id="sign_in_form" class="form">
     <%= form_for(User.new, as: :user, url: session_path(:user)) do |f| %>
     <%= f.email_field :email, autofocus: true, :placeholder => "Email" %><br>
@@ -28,12 +28,19 @@
     <!-- <%= f.check_box :remember_me %> <%= f.label :remember_me %><br> -->
     <%= f.submit "Sign in", :class => 'sessions_button'  %>
     <% end %>
-    <%= link_to "Sign up", new_registration_path(User)%>
+    <%= link_to "Sign up", new_registration_path(User), :class => 'sessions_button'%>
+
+  </div>
+  <div class="client_portal">
+    Client Portal
   </div>
 </div>
 
 <script charset="utf-8">
 $('#portal_form_button').click(function(){
   $('#modal').fadeIn();
+});
+$('#close').click(function(){
+  $('#modal').fadeOut();
 });
 </script>
