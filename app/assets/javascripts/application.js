@@ -21,5 +21,5 @@ document.addEventListener('page:change', function() {
   document.getElementById('portal_div').className += 'animated fadeIn';
 });
 document.addEventListener('page:fetch', function() {
-  document.getElementById('primary-content').className += 'animated fadeOut';
+  document.getElementById('portal_div').className += 'animated fadeOut';
 });
