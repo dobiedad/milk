@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.3'
+gem "animate-rails"
 group :development do
   gem 'spring'
   gem 'sqlite3'
