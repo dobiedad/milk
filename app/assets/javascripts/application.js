@@ -17,9 +17,41 @@
 //= require skrollr
 //= require skrollr.stylesheets.min
 //= require placeholder.min
+
 document.addEventListener('page:change', function() {
-  document.getElementById('portal_div').className += 'animated fadeIn';
+  $('#portal_div').addClass('animated fadeIn');
 });
 document.addEventListener('page:fetch', function() {
-  document.getElementById('portal_div').className += 'animated fadeOut';
+  $('#portal_div').addClass('animated fadeOut');
 });
+
+
+function resizeVideo() {
+  var videoWidth = $("video").width();
+  var screenWidth = $(window).width();
+  $("video").css({ left: ((screenWidth - videoWidth) * 0.44) + 'px' })
+};
+
+var resizeTimer;
+$(window).resize(function () {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(resizeVideo, 150);
+});
+
+$(function() {
+  resizeVideo();
+  var video = $("video")[0];
+  video.addEventListener('loadeddata', function() {
+    resizeVideo();
+  }, false);
+  fadeLogoIn();
+});
+
+function fadeLogoIn() {
+  setTimeout(function() {
+    $('.logo').addClass('animated fadeIn zoomIn')
+  }, 3000);
+}
+
+
+
