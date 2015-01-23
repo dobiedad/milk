@@ -17,11 +17,12 @@
 //= require skrollr
 //= require skrollr.stylesheets.min
 //= require placeholder.min
+
 document.addEventListener('page:change', function() {
-  $('portal_div').addClass('animated fadeIn');
+  $('#portal_div').addClass('animated fadeIn');
 });
 document.addEventListener('page:fetch', function() {
-  $('portal_div').addClass('animated fadeOut');
+  $('#portal_div').addClass('animated fadeOut');
 });
 
 
@@ -43,5 +44,14 @@ $(function() {
   video.addEventListener('loadeddata', function() {
     resizeVideo();
   }, false);
+  fadeLogoIn();
 });
+
+function fadeLogoIn() {
+  setTimeout(function() {
+    $('.logo').addClass('animated fadeIn zoomIn')
+  }, 3000);
+}
+
+
 

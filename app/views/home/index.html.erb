@@ -1,22 +1,21 @@
+<div id="video-background">
+  <%= video_tag "milk.mp4",id:"main-video", autoplay: true, :controls => false %>
+</div>
+
+<div class="logo">
+  STEELE &amp; BROWN
+</div>
+
+
 <div id="bg_layer">
-  <div id="chart">
-    <div class="chart"></div>
-  </div>
   <div id="pg1"></div>
   <div id="pg2"></div>
   <div id="pg3"></div>
 
   <div id="video-div">
-    <div class="logo">
-      STEELE & BROWN
-    </div>
     <div id="client_portal" class="client_portal">
       <a id="portal_form_button">Client Portal</a>
     </div>
-    <div class="hex"></div>
-    <div class="dots"></div>
-    <div class="tee"></div>
-    <%= video_tag "milk.mp4",id:"main-video", autoplay: true, :controls => false %>
     <div id="modal">
       <div class=""><%= image_tag ('close.png'),id:"close"%></div>
       <div id="sign_in_form" class="form">
@@ -44,10 +43,6 @@
         <% end %>
         <a id="sign_in" class="sessions_button other_session_button"> Sign In</a>
       </div>
-
-
-
-
     </div>
 
 </div>
@@ -67,7 +62,6 @@
 <% end %>
 
 <script charset="utf-8">
-
 
 $('#close').click(function(){
   $('#modal').fadeOut();
